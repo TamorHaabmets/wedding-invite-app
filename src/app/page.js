@@ -39,7 +39,7 @@ const sendEmail = async (name, status) => {
 
 export default function WeddingInvite() {
   let search;
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     search = window.location.search;
   }
   const params = new URLSearchParams(search);
@@ -57,75 +57,84 @@ export default function WeddingInvite() {
   };
 
   return (
-    <div
-      className="min-h-screen flex flex-col items-center justify-center p-8 bg-cover bg-center white font-serif"
-      style={{ backgroundImage: `url('/IMG_5043.webp')` }}
-    >
-      <div className="p-8 rounded-2xl shadow-xl max-w-lg w-full border  bg-black/45 backdrop-blur-xs">
-        <p className="text-3xl mb-4 text-center text-gray-100">
-          {guest.prefix} {guest.name}
-        </p>
-        <br />
-        <p className="text-xl mb-4 text-center text-gray-100">
-          MEIL ON SUUR RÕÕM KUTSUDA SIND OSA SAAMA MEIE PULMAPÄEVAST!
-        </p>
-        <br />
-        <p className="text-lg mb-4 text-center text-gray-100">
-          LAUPÄEVAL, 6 SEPTEMBER, 2025
-          <br />
-          KELL 16.00
-          <br />
-          OKO RESTORAN, KESK TEE 27, VIIMSI
-        </p>
-
-        <hr className="mx-auto my-6 w-1/2 border-t border-gray-300" />
-
-        <ul className="list-disc list-inside space-y-2 mb-4 text-gray-100">
-          <li className="-indent-6 ml-6">
-            Palume kohal olla<span className="font-semibold"> vähemalt 15 minutit varem</span>
-          </li>
-          <li className="-indent-6 ml-6">
-            Pidu kestab orienteeruvalt keskööni
-          </li>
-          <li className="-indent-6 ml-6">
-            Kingitused? Teie kohalolek on meile kõige olulisem! Kui soovite
-            siiski midagi kinkida, rõõmustaks meid ümbrikusse mahtuv kingitus
-          </li>
-          <li className="-indent-6 ml-6">
-            Õhtu jooksul on olemas lapsehoidja, kuid soovitame võimalusel lapse
-            koju jätta
-          </li>
-          <li className="-indent-6 ml-6">
-            Palume tulekust või mittetulekust teatada hiljemalt{" "}
-            <span className="font-semibold">1. maiks</span>
-          </li>
-        </ul>
-
-        {!response ? (
-          <div className="flex gap-4 pt-8 justify-center">
-            <button
-              onClick={() => handleResponse("declined")}
-              className="bg-red-200 px-6 py-2 rounded-full cursor-pointer font-semibold hover:bg-red-300 text-gray-800"
-            >
-              Kahjuks ei saa tulla
-            </button>
-            <button
-              onClick={() => handleResponse("accepted")}
-              className="bg-green-200 px-6 py-2 rounded-full cursor-pointer font-semibold hover:bg-green-300 text-gray-800"
-            >
-              Pulmas näeme!
-            </button>
-          </div>
-        ) : (
-          <p className="mt-6 text-center text-xl font-semibold text-gray-100">
-            Saime vastuse kätte, aitäh!
+    <>
+      <img
+        src="/IMG_5043.webp"
+        alt=""
+        style={{ display: "none" }}
+        loading="eager"
+      />
+      <div
+        className="min-h-screen flex flex-col items-center justify-center p-8 bg-cover bg-center white font-serif"
+        style={{ backgroundImage: `url('/IMG_5043.webp')` }}
+      >
+        <div className="p-8 rounded-2xl shadow-xl max-w-lg w-full border  bg-black/45 backdrop-blur-xs">
+          <p className="text-3xl mb-4 text-center text-gray-100">
+            {guest.prefix} {guest.name}
           </p>
-        )}
+          <br />
+          <p className="text-xl mb-4 text-center text-gray-100">
+            MEIL ON SUUR RÕÕM KUTSUDA SIND OSA SAAMA MEIE PULMAPÄEVAST!
+          </p>
+          <br />
+          <p className="text-lg mb-4 text-center text-gray-100">
+            LAUPÄEVAL, 6 SEPTEMBER, 2025
+            <br />
+            KELL 16.00
+            <br />
+            OKO RESTORAN, KESK TEE 27, VIIMSI
+          </p>
 
-        <p className="mt-6 text-center text-gray-200">
-          Pulmapäeva ootuses Tamor ja Elina
-        </p>
+          <hr className="mx-auto my-6 w-1/2 border-t border-gray-300" />
+
+          <ul className="list-disc list-inside space-y-2 mb-4 text-gray-100">
+            <li className="-indent-6 ml-6">
+              Palume kohal olla
+              <span className="font-semibold"> vähemalt 15 minutit varem</span>
+            </li>
+            <li className="-indent-6 ml-6">
+              Pidu kestab orienteeruvalt keskööni
+            </li>
+            <li className="-indent-6 ml-6">
+              Kingitused? Teie kohalolek on meile kõige olulisem! Kui soovite
+              siiski midagi kinkida, rõõmustaks meid ümbrikusse mahtuv kingitus
+            </li>
+            <li className="-indent-6 ml-6">
+              Õhtu jooksul on olemas lapsehoidja, kuid soovitame võimalusel
+              lapse koju jätta
+            </li>
+            <li className="-indent-6 ml-6">
+              Palume tulekust või mittetulekust teatada hiljemalt{" "}
+              <span className="font-semibold">1. maiks</span>
+            </li>
+          </ul>
+
+          {!response ? (
+            <div className="flex gap-4 pt-8 justify-center">
+              <button
+                onClick={() => handleResponse("declined")}
+                className="bg-red-200 px-6 py-2 rounded-full cursor-pointer font-semibold hover:bg-red-300 text-gray-800"
+              >
+                Kahjuks ei saa tulla
+              </button>
+              <button
+                onClick={() => handleResponse("accepted")}
+                className="bg-green-200 px-6 py-2 rounded-full cursor-pointer font-semibold hover:bg-green-300 text-gray-800"
+              >
+                Pulmas näeme!
+              </button>
+            </div>
+          ) : (
+            <p className="mt-6 text-center text-xl font-semibold text-gray-100">
+              Saime vastuse kätte, aitäh!
+            </p>
+          )}
+
+          <p className="mt-6 text-center text-gray-200">
+            Pulmapäeva ootuses Tamor ja Elina
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
