@@ -32,7 +32,6 @@ const sendEmail = async (name, status) => {
 
   try {
     await emailjs.send(serviceId, templateId, templateParams, publicKey);
-    console.log("Email sent");
   } catch (error) {
     console.error("Error sending email:", error);
   }
