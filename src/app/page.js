@@ -38,7 +38,10 @@ const sendEmail = async (name, status) => {
 };
 
 export default function WeddingInvite() {
-  const search = window.location.search;
+  let search;
+  if (typeof window !== 'undefined') {
+    search = window.location.search;
+  }
   const params = new URLSearchParams(search);
   const guestId = params.get("guestId");
   const guest = guests[guestId];
@@ -56,7 +59,7 @@ export default function WeddingInvite() {
   return (
     <div
       className="min-h-screen flex flex-col items-center justify-center p-8 bg-cover bg-center white font-serif"
-      style={{ backgroundImage: `url('/IMG_5043.jpg')` }}
+      style={{ backgroundImage: `url('/IMG_5043.webp')` }}
     >
       <div className="p-8 rounded-2xl shadow-xl max-w-lg w-full border  bg-black/45 backdrop-blur-xs">
         <p className="text-3xl mb-4 text-center text-gray-100">
