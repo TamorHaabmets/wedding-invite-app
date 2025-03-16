@@ -3,13 +3,13 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 
 const guests = {
-  650139: { name: "HELINA", prefix: "KALLIS" },
-  650239: { name: "MIKK", prefix: "KALLIS" },
+  650139: { name: "KALJU JA ÕIE", prefix: "KALLID" },
+  650239: { name: "EVER JA MARILIN", prefix: "KALLID" },
   650339: { name: "JAAK", prefix: "KALLIS" },
   650439: { name: "SIIM", prefix: "KALLIS" },
   650539: { name: "TEENA", prefix: "KALLIS" },
   650639: { name: "ANDRIANA", prefix: "KALLIS" },
-  650739: { name: "HELINA", prefix: "KALLIS" },
+  650739: { name: "KALJU", prefix: "KALLIS" },
   650839: { name: "HELINA", prefix: "KALLIS" },
   650939: { name: "HELINA", prefix: "KALLIS" },
   651039: { name: "HELINA", prefix: "KALLIS" },
