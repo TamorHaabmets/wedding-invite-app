@@ -12,7 +12,7 @@ const guests = {
   650739: { name: "IRINA JA KAASLANE", multi: true },
   650839: { name: "TAMARA", multi: false },
   650939: { name: "SILVA JA MATI", multi: true },
-  651039: { name: "RIINA", multi: false },
+  651039: { name: "RIINA JA KELLY", multi: true },
   651139: { name: "ELYS JA MÄRTEN", multi: true },
   651239: { name: "SIIRI JA KARL", multi: true },
   651339: { name: "GERMAN JA MONIKA", multi: true },
