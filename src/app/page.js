@@ -3,21 +3,31 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 
 const guests = {
-  650139: { name: "KALJU JA ÕIE", prefix: "KALLID" },
-  650239: { name: "EVER JA MARILIN", prefix: "KALLID" },
-  650339: { name: "JAAK", prefix: "KALLIS" },
-  650439: { name: "SIIM", prefix: "KALLIS" },
-  650539: { name: "TEENA", prefix: "KALLIS" },
-  650639: { name: "ANDRIANA", prefix: "KALLIS" },
-  650739: { name: "KALJU", prefix: "KALLIS" },
-  650839: { name: "HELINA", prefix: "KALLIS" },
-  650939: { name: "HELINA", prefix: "KALLIS" },
-  651039: { name: "HELINA", prefix: "KALLIS" },
-  651139: { name: "HELINA", prefix: "KALLIS" },
-  651239: { name: "HELINA", prefix: "KALLIS" },
-  651339: { name: "HELINA", prefix: "KALLIS" },
-  651439: { name: "HELINA", prefix: "KALLIS" },
-  650239: { name: "ANNELI JA ANDRES", prefix: "KALLID" },
+  650139: { name: "KALJU JA ÕIE", multi: true },
+  650239: { name: "NATALJA JA ARKADI", multi: true},
+  650339: { name: "ANNELI JA ANDRES", multi: true },
+  650439: { name: "SIIM", multi: false },
+  650539: { name: "TEENA", multi: false },
+  650639: { name: "EVER JA MARILIN", multi: true },
+  650739: { name: "IRINA JA KAASLANE", multi: true },
+  650839: { name: "TAMARA", multi: false },
+  650939: { name: "SILVA JA MATI", multi: true },
+  651039: { name: "RIINA", multi: false },
+  651139: { name: "ELYS JA MÄRTEN", multi: true },
+  651239: { name: "SIIRI JA KARL", multi: true },
+  651339: { name: "GERMAN JA MONIKA", multi: true },
+  651439: { name: "GRETHEN JA KEVIN", multi: true },
+  651539: { name: "KRISTIN JA KARL", multi: true },
+  651639: { name: "ANDRIANA", multi: false },
+  651739: { name: "HELINA", multi: false },
+  651839: { name: "KRISTIN JA SANDER", multi: true },
+  651939: { name: "ANNELI JA KAASLANE", multi: true },
+  652039: { name: "LAURA JA KEVIN", multi: true },
+  652139: { name: "ALEX JA KAASLANE", multi: true },
+  652239: { name: "MARTIN JA ORNELLA", multi: true },
+  652339: { name: "TAAVET JA ANETTE", multi: true },
+  652439: { name: "JAAK", multi: false },
+  652539: { name: "MICHEL JA KAASLANE", multi: true },
 };
 
 const sendEmail = async (name, status) => {
@@ -70,11 +80,11 @@ export default function WeddingInvite() {
       >
         <div className="p-8 rounded-2xl shadow-xl max-w-lg w-full border  bg-black/45 backdrop-blur-xs">
           <p className="text-3xl mb-4 text-center text-gray-100">
-            {guest.prefix} {guest.name}
+            {guest.multi ? "KALLID" : "KALLIS"} {guest.name}
           </p>
           <br />
           <p className="text-xl mb-4 text-center text-gray-100">
-            MEIL ON SUUR RÕÕM KUTSUDA SIND OSA SAAMA MEIE PULMAPÄEVAST!
+            MEIL ON SUUR RÕÕM KUTSUDA {guest.multi ? "TEID" : "SIND"} OSA SAAMA MEIE PULMAPÄEVAST!
           </p>
           <br />
           <p className="text-lg mb-4 text-center text-gray-100">
@@ -96,7 +106,7 @@ export default function WeddingInvite() {
               Pidu kestab orienteeruvalt keskööni
             </li>
             <li className="-indent-6 ml-6">
-              Kingitused? Teie kohalolek on meile kõige olulisem! Kui soovite
+              Kingitused? {guest.multi ? "Teie" : "Sinu"} kohalolek on meile kõige olulisem! Kui soovite
               siiski midagi kinkida, rõõmustaks meid ümbrikusse mahtuv kingitus
             </li>
             <li className="-indent-6 ml-6">
