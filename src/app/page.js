@@ -31,6 +31,10 @@ const guests = {
   652639: { name: "STANISLAV JA ELENA", multi: true },
   652739: { name: "GRETE JA STEN", multi: true },
   652839: { name: "GENNADI JA ANNE", multi: true },
+  652939: { name: "RANDAL JA SELENE", multi: true },
+  653039: { name: "ERIK JA ANNAMARI", multi: true },
+  653139: { name: "IGOR JA INGA", multi: true },
+  653239: { name: "ARTUR", multi: false },
 };
 
 const sendEmail = async (name, status) => {
