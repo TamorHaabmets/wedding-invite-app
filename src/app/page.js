@@ -65,7 +65,62 @@ export default function WeddingInvite() {
   const [response, setResponse] = useState(null);
 
   if (!guest) {
-    return <p>Guest not found</p>;
+    return <>
+    <img
+      src="/IMG_5043.webp"
+      alt=""
+      style={{ display: "none" }}
+      loading="eager"
+    />
+    <div
+      className="min-h-screen flex flex-col items-center justify-center p-8 bg-cover bg-center white font-serif"
+      style={{ backgroundImage: `url('/IMG_5043.webp')` }}
+    >
+      <div className="p-8 rounded-2xl shadow-xl max-w-lg w-full border  bg-black/45 backdrop-blur-xs">
+
+        <br />
+        <p className="text-xl mb-4 text-center text-gray-100">
+          MEIL ON SUUR RÕÕM KUTSUDA  OSA SAAMA MEIE PULMAPÄEVAST!
+        </p>
+        <br />
+        <p className="text-lg mb-4 text-center text-gray-100">
+          LAUPÄEVAL, 6 SEPTEMBER, 2025
+          <br />
+          KELL 16.00
+          <br />
+          OKO RESTORAN, KESK TEE 27, VIIMSI
+        </p>
+
+        <hr className="mx-auto my-6 w-1/2 border-t border-gray-300" />
+        <p className="text-3xl mb-4 text-center text-gray-100">
+          LISAINFO
+        </p>
+        <ul className="list-disc list-inside space-y-2 mb-4 text-gray-100">
+          <li className="-indent-6 ml-6">
+            Palume kohal olla
+            <span className="font-semibold"> vähemalt 15 minutit varem</span>
+          </li>
+
+          <li className="-indent-6 ml-6">
+            Palume lilli mitte tuua, sh potililled, uinuvad roosid jms
+          </li>
+          <li className="-indent-6 ml-6">
+            Parkida saab restoranist paremat kätt (väiksem parkla) ja lisaks 100 meetrit enne restorani paremat kätt (suurem parkla), mõlemad parklad on tasuta.
+          </li>
+          <li className="-indent-6 ml-6">
+            Pidu lõppeb hiljemalt 02:00
+          </li>
+
+        </ul>
+
+  
+
+        <p className="mt-6 text-center text-gray-200">
+          Pulmapäeva ootuses Tamor ja Elina
+        </p>
+      </div>
+    </div>
+  </>
   }
 
   const handleResponse = (status) => {
